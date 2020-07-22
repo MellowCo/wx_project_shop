@@ -1,0 +1,7 @@
+GET https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata
+
+###
+GET https://api-hmugo-web.itheima.net/api/public/v1/home/catitems HTTP/1.1
+
+###
+GET https://api-hmugo-web.itheima.net/api/public/v1/home/floordata HTTP/1.1

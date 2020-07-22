@@ -1,0 +1,15 @@
+<SearchInput></SearchInput>
+<view>
+  <swiper autoplay class="swiper_items" indicator-dots>
+    <swiper-item wx:for="{{swipers}}" wx:key="goods_id">
+      <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+        <image src="{{item.image_src}}" mode="widthFix" lazy-load></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="nav">
+  <navigator class="nav_item" wx:for="{{navs}}" url="{{item.navigator_url}}" open-type="navigate">
+    <image src="{{item.image_src}}" mode="widthFix" />
+  </navigator>
+</view>
