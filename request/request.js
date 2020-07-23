@@ -1,9 +1,12 @@
-export function ajax({ url, data, method = 'GET' }) {
+export function ajax({ url, data, method = 'GET', loading = true }) {
   return new Promise((resolve, reject) => {
-    wx.showLoading({
-      title: '加载中...',
-      mask: true
-    })
+    if (loading) {
+      wx.showLoading({
+        title: '加载中...',
+        mask: true
+      })
+    }
+
     const baseUrl = 'https://api-hmugo-web.itheima.net/api/public/v1/'
 
     wx.request({
@@ -20,7 +23,9 @@ export function ajax({ url, data, method = 'GET' }) {
         reject(err)
       },
       complete: () => {
-        wx.hideLoading()
+        if (loading) {
+          wx.hideLoading()
+        }
       }
     })
   })
