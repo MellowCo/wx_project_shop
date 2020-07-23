@@ -1,7 +1,17 @@
+### 首页
+### 轮播图
 GET https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata
 
-###
+### 导航
 GET https://api-hmugo-web.itheima.net/api/public/v1/home/catitems HTTP/1.1
 
-###
+### 楼层
 GET https://api-hmugo-web.itheima.net/api/public/v1/home/floordata HTTP/1.1
+
+### 分类
+### 商品分类
+GET https://api-hmugo-web.itheima.net/api/public/v1/categories HTTP/1.1
+
+
+###商品详情 
+GET https://api-hmugo-web.itheima.net/api/public/v1/goods/search HTTP/1.1

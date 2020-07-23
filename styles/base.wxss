@@ -14,8 +14,12 @@ page {
 
 page {
   --themeColor: #ff2d4a;
+
+  --black: #000000;
+  --semi: #353535;
+  --grep: #888888;
+  --light: #b2b2b2;
   font-size: 28rpx;
-  color: #666666;
 }
 
 image {
