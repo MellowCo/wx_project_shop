@@ -29,7 +29,7 @@
       <view class="goods_item_right">
         <block wx:for="{{item.product_list}}" wx:for-item="childItem" wx:for-index="childIndex" wx:key="childIndex">
           <navigator wx:if="{{childIndex!==0}}" url="{{childItem.navigator_url}}" open-type="navigate">
-            <image src="{{childItem.image_src}}" mode="widthFix" lazy-load></image>
+            <image src="{{childItem.image_src}}" lazy-load></image>
           </navigator>
         </block>
       </view>
