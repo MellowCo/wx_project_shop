@@ -1,0 +1,5 @@
+<block wx:if="{{loadingFlag !== -2}}">
+  <mp-loading type="circle" show="{{ loadingFlag === 0 }}"></mp-loading>
+  <view wx:if="{{loadingFlag === -1}}" bind:tap="handleTap" class="loading_info">{{error}}</view>
+  <view wx:elif="{{loadingFlag === 1}}" class="loading_info">{{nomore}}</view>
+</block>
