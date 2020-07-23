@@ -7,7 +7,7 @@
     </view>
   </scroll-view>
   <!-- 右侧导航内容 -->
-  <scroll-view class="main" scroll-y>
+  <scroll-view class="main" scroll-y scroll-top="{{top}}">
     <view class="main_item" wx:for="{{goods}}" wx:key="cat_id">
       <view class="item_title">/ {{item.cat_name}} /</view>
       <view class="item_list">

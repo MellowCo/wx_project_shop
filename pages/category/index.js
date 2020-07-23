@@ -7,7 +7,8 @@ Page({
   data: {
     siderbars: [],
     goods: [],
-    active: 0
+    active: 0,
+    top: 0
   },
   async onLoad() {
     const { message } = await categories()
@@ -26,7 +27,8 @@ Page({
 
     this.setData({
       active,
-      goods: this.data.siderbars[active].children
+      goods: this.data.siderbars[active].children,
+      top: 0
     })
   }
 })
