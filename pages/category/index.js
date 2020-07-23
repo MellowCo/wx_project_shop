@@ -28,8 +28,5 @@ Page({
       active,
       goods: this.data.siderbars[active].children
     })
-  },
-  handleItemTap(e) {
-    console.log(e)
   }
 })

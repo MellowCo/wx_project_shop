@@ -11,10 +11,10 @@
     <view class="main_item" wx:for="{{goods}}" wx:key="cat_id">
       <view class="item_title">/ {{item.cat_name}} /</view>
       <view class="item_list">
-        <view class="item" bind:tap="handleItemTap" data-item="{{citem}}" wx:for="{{item.children}}" wx:key="cat_id" wx:for-index="cindex" wx:for-item="citem">
+        <navigator class="item" url="/pages/goods_list/index?cat_id={{citem.cat_id}}" data-item="{{citem}}" wx:for="{{item.children}}" wx:key="cat_id" wx:for-index="cindex" wx:for-item="citem">
           <image src="{{citem.cat_icon}}" mode="widthFix" lazy-load></image>
           <text>{{citem.cat_name}}</text>
-        </view>
+        </navigator>
       </view>
     </view>
   </scroll-view>
