@@ -14,4 +14,4 @@ GET https://api-hmugo-web.itheima.net/api/public/v1/categories HTTP/1.1
 
 
 ###商品详情 
-GET https://api-hmugo-web.itheima.net/api/public/v1/goods/search HTTP/1.1
+GET https://api-hmugo-web.itheima.net/api/public/v1/goods/search?cid=5 HTTP/1.1

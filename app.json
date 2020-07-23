@@ -18,7 +18,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff2d4a",
     "navigationBarTitleText": "shop",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark"
   },
   "tabBar": {
     "color": "#6e6e6e",
