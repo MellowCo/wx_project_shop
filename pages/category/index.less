@@ -1,0 +1,55 @@
+/* pages/category/index.wxss */
+
+.content {
+  display: flex;
+  .sidebar {
+    height: calc(100vh - 80rpx);
+    flex: 1;
+    background-color: #dcdcdc;
+    .sidebar_item {
+      padding: 20rpx 0;
+      margin-bottom: 2rpx;
+      text-align: center;
+      background-color: #f4f4f4;
+      color: var(--balck);
+    }
+
+    .active {
+      position: relative;
+      color: var(--themeColor);
+      background-color: white;
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 80%;
+        width: 10rpx;
+        left: 0;
+        top: 10%;
+        background-color: var(--themeColor);
+      }
+    }
+  }
+
+  .main {
+    flex: 3;
+    height: calc(100vh - 80rpx);
+    .main_item {
+      .item_title {
+        font-size: 40rpx;
+        text-align: center;
+        padding: 30rpx 0;
+      }
+
+      .item_list {
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+          width: 33%;
+          padding: 20rpx;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
