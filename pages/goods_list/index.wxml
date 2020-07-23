@@ -5,7 +5,7 @@
   <view class="tab_item">价格</view>
 </view>
 <view class="content">
-  <scroll-view scroll-y refresher-enabled refresher-triggered="{{refresh}}" class="scroll" bindrefresherpulling="refreshPull" bindscrolltolower="scrollBottom">
+  <scroll-view scroll-y refresher-enabled refresher-triggered="{{refresh}}" lower-threshold="100" class="scroll" bindrefresherpulling="refreshPull" bindscrolltolower="scrollBottom">
     <view class="item" wx:for="{{goods}}" wx:key="goods_id">
       <view class="left">
         <image src="{{item.goods_small_logo}}" mode="widthFix" lazy-load="false"></image>

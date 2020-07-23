@@ -60,7 +60,6 @@ Page({
       const goods = await this.queryGoods()
 
       if (goods.length === 0) {
-        console.log(0)
         // 没有更多数据了
         this.setData({
           loadingFlag: 1,
