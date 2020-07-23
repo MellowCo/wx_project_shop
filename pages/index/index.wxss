@@ -9,3 +9,31 @@
   flex: 1;
   padding: 20rpx;
 }
+.goods_lists .goods_list {
+  display: flex;
+  flex-direction: column;
+}
+.goods_lists .goods_list .goods_title {
+  width: 750rpx;
+  height: 59rpx;
+}
+.goods_lists .goods_list .goods_items {
+  display: flex;
+  flex: 1;
+  padding: 20rpx;
+  padding-right: 10rpx;
+}
+.goods_lists .goods_list .goods_items .goods_item_left {
+  width: 232rpx;
+  height: 386rpx;
+  margin-right: 10rpx;
+}
+.goods_lists .goods_list .goods_items .goods_item_right {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.goods_lists .goods_list .goods_items .goods_item_right navigator {
+  width: 50%;
+  padding-right: 10rpx;
+}
