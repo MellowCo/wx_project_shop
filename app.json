@@ -15,7 +15,6 @@
     "pages/pay/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff2d4a",
     "navigationBarTitleText": "shop",
     "navigationBarTextStyle": "white",
