@@ -1,0 +1,55 @@
+.tab {
+  position: sticky;
+  display: flex;
+  height: 70rpx;
+  top: 0;
+  background-color: white;
+  .tab_item {
+    flex: 1;
+    text-align: center;
+    line-height: 70rpx;
+    color: var(--grep);
+  }
+}
+
+.content {
+  .scroll {
+    height: calc(100vh - 80rpx);
+    position: relative;
+    background-color: #e4e4e4;
+
+    .item {
+      display: flex;
+      margin-bottom: 2rpx;
+      background-color: white;
+      padding: 30rpx;
+
+      .left {
+        flex: 1;
+      }
+
+      .right {
+        flex: 2;
+        padding-left: 30rpx;
+
+        .info {
+          display: -webkit-box;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+
+          padding-top: 50rpx;
+          font-size: 30rpx;
+        }
+
+        .price {
+          padding-top: 50rpx;
+          color: var(--themeColor);
+          font-size: 35rpx;
+        }
+      }
+    }
+  }
+}

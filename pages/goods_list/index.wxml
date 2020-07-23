@@ -1,2 +1,20 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<SearchInput></SearchInput>
+<view class="tab">
+  <view class="tab_item">综合</view>
+  <view class="tab_item">销量</view>
+  <view class="tab_item">价格</view>
+</view>
+<view class="content">
+  <scroll-view scroll-y refresher-enabled refresher-triggered="{{refresh}}" class="scroll" bindrefresherpulling="refreshPull" bindscrolltolower="scrollBottom">
+    <view class="item" wx:for="{{goods}}" wx:key="goods_id">
+      <view class="left">
+        <image src="{{item.goods_small_logo}}" mode="widthFix" lazy-load="false"></image>
+      </view>
+      <view class="right">
+        <view class="info">{{item.goods_name}}</view>
+        <view class="price">￥ {{item.goods_price}}</view>
+      </view>
+    </view>
+    <NoMore bind:click="scrollBottom" loadingFlag="{{loadingFlag}}"></NoMore>
+  </scroll-view>
+</view>
