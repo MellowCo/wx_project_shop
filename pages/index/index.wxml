@@ -14,25 +14,21 @@
   </navigator>
 </view>
 <view class="goods_lists">
-  <view class="goods_list" wx:for="{{floors}}" wx:key="{{index}}">
+  <view class="goods_list" wx:for="{{floors}}" wx:key="index">
     <!-- 标题 -->
     <view class="goods_title">
       <image src="{{item.floor_title.image_src}}" mode="widthFix" lazy-load></image>
     </view>
     <!-- 图片内容 -->
     <view class="goods_items">
-      <view class="goods_item_left">
-        <navigator url="{{item.product_list[0].navigator_url}}" open-type="navigate">
-          <image src="{{item.product_list[0].image_src}}" mode="widthFix" lazy-load></image>
+      <!-- <navigator url="{{item.product_list[0].navigator_url}}" open-type="navigate">
+        <image src="{{item.product_list[0].image_src}}" mode="widthFix" lazy-load></image>
+      </navigator> -->
+      <block wx:for="{{item.product_list}}" wx:for-item="childItem" wx:for-index="childIndex" wx:key="childIndex">
+        <navigator url="{{childItem.navigator_url}}" open-type="navigate">
+          <image src="{{childItem.image_src}}" lazy-load></image>
         </navigator>
-      </view>
-      <view class="goods_item_right">
-        <block wx:for="{{item.product_list}}" wx:for-item="childItem" wx:for-index="childIndex" wx:key="childIndex">
-          <navigator wx:if="{{childIndex!==0}}" url="{{childItem.navigator_url}}" open-type="navigate">
-            <image src="{{childItem.image_src}}" lazy-load></image>
-          </navigator>
-        </block>
-      </view>
+      </block>
     </view>
   </view>
 </view>

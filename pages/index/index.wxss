@@ -12,32 +12,24 @@
 .goods_lists .goods_list {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20rpx;
 }
 .goods_lists .goods_list .goods_title {
   width: 750rpx;
   height: 59rpx;
 }
 .goods_lists .goods_list .goods_items {
-  display: flex;
-  flex: 1;
-  padding: 20rpx;
+  display: grid;
+  width: 100%;
+  padding: 0 10rpx;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 27.45258621vw);
+  grid-gap: 10rpx;
 }
-.goods_lists .goods_list .goods_items .goods_item_left {
-  flex: 1;
+.goods_lists .goods_list .goods_items navigator:first-child {
+  grid-row-start: span 2;
+  grid-column-start: span 1;
 }
-.goods_lists .goods_list .goods_items .goods_item_right {
-  flex: 2;
-  display: flex;
-  flex-wrap: wrap;
-}
-.goods_lists .goods_list .goods_items .goods_item_right navigator {
-  width: 50%;
-  height: 54.90517241 vw;
-  padding-left: 10rpx;
-}
-.goods_lists .goods_list .goods_items .goods_item_right navigator:nth-child(-n + 2) {
-  margin-bottom: 10rpx;
-}
-.goods_lists .goods_list .goods_items .goods_item_right navigator image {
+.goods_lists .goods_list .goods_items image {
   height: 100%;
 }
