@@ -14,12 +14,15 @@ Page({
     goods: [],
     refresh: false,
     loadingFlag: 0,
-    notBottomLoading: false
+    notBottomLoading: false,
+    tabs: [
+      { id: 1, value: '综合' },
+      { id: 2, value: '销量' },
+      { id: 3, value: '价格' }
+    ],
+    activeIndex: 0,
+    tabsLength: 3
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   async onLoad(options) {
     const { cat_id: cid } = options
     this.setData({
@@ -100,5 +103,12 @@ Page({
         goods
       })
     }
+  },
+  // 点击 tab 栏
+  handleTap(e) {
+    const { detail } = e
+    this.setData({
+      activeIndex: detail
+    })
   }
 })

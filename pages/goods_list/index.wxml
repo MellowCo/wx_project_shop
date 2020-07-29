@@ -1,20 +1,21 @@
 <SearchInput></SearchInput>
-<view class="tab">
-  <view class="tab_item">综合</view>
-  <view class="tab_item">销量</view>
-  <view class="tab_item">价格</view>
-</view>
-<view class="content">
-  <scroll-view scroll-y refresher-enabled refresher-triggered="{{refresh}}" lower-threshold="100" class="scroll" bindrefresherpulling="refreshPull" bindscrolltolower="scrollBottom">
-    <view class="item" wx:for="{{goods}}" wx:key="goods_id">
-      <view class="left">
-        <image src="{{item.goods_small_logo}}" mode="widthFix" lazy-load="false"></image>
-      </view>
-      <view class="right">
-        <view class="info">{{item.goods_name}}</view>
-        <view class="price">￥ {{item.goods_price}}</view>
-      </view>
+<Tabs tabs="{{tabs}}" activeIndex="{{activeIndex}}" bind:click="handleTap">
+  <view class="content" style="margin-left:{{-activeIndex*750}}rpx;width:{{3*750}}rpx;">
+    <view class="content_item">
+      <scroll-view scroll-y refresher-enabled refresher-triggered="{{refresh}}" lower-threshold="100" class="scroll" bindrefresherpulling="refreshPull" bindscrolltolower="scrollBottom">
+        <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" class="item" wx:for="{{goods}}" wx:key="goods_id">
+          <view class="left">
+            <image src="{{item.goods_small_logo || 'http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000826147951_1_400x400.jpg'}}" mode="widthFix" lazy-load="false"></image>
+          </view>
+          <view class="right">
+            <view class="info">{{item.goods_name}}</view>
+            <view class="price">￥ {{item.goods_price}}</view>
+          </view>
+        </navigator>
+        <NoMore bind:click="scrollBottom" loadingFlag="{{loadingFlag}}"></NoMore>
+      </scroll-view>
     </view>
-    <NoMore bind:click="scrollBottom" loadingFlag="{{loadingFlag}}"></NoMore>
-  </scroll-view>
-</view>
+    <view class="content_item">2</view>
+    <view class="content_item">3</view>
+  </view>
+</Tabs>

@@ -11,36 +11,50 @@
   line-height: 70rpx;
   color: var(--grep);
 }
-.content .scroll {
+.content {
+  overflow: hidden;
+  display: flex;
+  transition: all 0.5s;
+}
+.content .content_item {
+  width: 750rpx;
+}
+.content .content_item .scroll {
   height: calc(100vh - 80rpx);
   position: relative;
   background-color: #e4e4e4;
 }
-.content .scroll .item {
+.content .content_item .scroll .item {
   display: flex;
   margin-bottom: 2rpx;
   background-color: white;
-  padding: 30rpx;
+  padding: 20rpx 0;
 }
-.content .scroll .item .left {
-  flex: 1;
-}
-.content .scroll .item .right {
+.content .content_item .scroll .item .left {
   flex: 2;
-  padding-left: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.content .scroll .item .right .info {
+.content .content_item .scroll .item .left image {
+  width: 70%;
+}
+.content .content_item .scroll .item .right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.content .content_item .scroll .item .right .info {
   display: -webkit-box;
   word-break: break-all;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  padding-top: 50rpx;
   font-size: 30rpx;
 }
-.content .scroll .item .right .price {
-  padding-top: 50rpx;
+.content .content_item .scroll .item .right .price {
   color: var(--themeColor);
   font-size: 35rpx;
 }
