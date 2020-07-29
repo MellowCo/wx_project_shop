@@ -1,1 +1,7 @@
-/* pages/goods_detail/index.wxss */
+.detail_view .detail_swiper .items_swiper {
+  width: 750rpx;
+  height: 750rpx;
+}
+.detail_view .detail_swiper .items_swiper image {
+  height: 100%;
+}
