@@ -11,12 +11,28 @@ Page({
     top: 0
   },
   async onLoad() {
-    const { message } = await categories()
+    const time = new Date().valueOf()
+    const categoryTime = wx.getStorageSync('categoryTime')
+    const category = wx.getStorageSync('category')
+
+    let _data
+
+    if (categoryTime && time - categoryTime < 1000 * 60 * 60 * 24 * 7) {
+      _data = category
+    } else {
+      _data = await this.getCategory(time)
+    }
+
     this.setData({
-      siderbars: message,
-      goods: message[0].children
+      siderbars: _data,
+      goods: _data[0].children
     })
-    console.log(message)
+  },
+  async getCategory(time) {
+    const { message } = await categories()
+    wx.setStorageSync('category', message)
+    wx.setStorageSync('categoryTime', time)
+    return message
   },
   handleSiderbarTap(e) {
     const {
